@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoomSpawner : MonoBehaviour
@@ -60,11 +61,14 @@ public class RoomSpawner : MonoBehaviour
 
             if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
             {
-                Debug.Log(roomTemp.closedRoom);
-               Instantiate(roomTemp.closedRoom, transform.position, Quaternion.identity);                   
-               Destroy(gameObject);
 
+                Instantiate(roomTemp.closedRoom,transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
+
+               
+
+            
             spawned = true;
         }
     }
