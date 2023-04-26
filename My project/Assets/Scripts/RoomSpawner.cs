@@ -7,7 +7,7 @@ public class RoomSpawner : MonoBehaviour
     // Start is called before the first frame update
     public int openSide;
 
-    //1 bot //2 tot //3 left //4 right
+    //1 bot //2 top //3 left //4 right
     private RoomTemp roomTemp;
     private int rand;
     [HideInInspector]public bool spawned=false;
